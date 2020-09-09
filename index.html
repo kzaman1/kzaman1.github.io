@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Mango Drink Maker!</title>
+    <link rel = "icon" href="images\mango-icon.svg" type = "image/x-icon">
+
+    <link rel="stylesheet" href="css\styles.css">
+  </head>
+  <body>
+    <h1>Mango Juice Maker!</h1>
+
+    <div id="mangojuiceCount" class="mangojuice-count">
+      Mango Juices Made: 0
+    </div>
+
+    <div>
+      <button type="button" class="make-btn" onclick="make()">Make Juice!</button>
+    </div>
+
+    <!-- POWER UPS SECTION -->
+
+    <div>
+      <div class="upgrades-title">
+        Upgrades
+      </div>
+
+      <div>
+        <button type="button" class="juice-press" onclick="buyJuicePress()"> Juice Press ($10)</button> x <span id="JuicePressCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-machine" onclick="buyJuiceMachine()"> Juice Machine ($20)</button> x <span id="JuiceMachineCount">0</span>
+      </div>
+
+
+    </div>
+
+
+  </body>
+  <script src="js/main.js"></script>
+</html>

@@ -1,0 +1,99 @@
+/* Let's make the default font 20px and add a nice orange to match the Mango theme */
+
+body{
+  font-size: 20px;
+  background-color: #f19b0a;
+}
+
+/* Since we're making a game, let's add a custom font that gives the feel of a game */
+@font-face {
+  font-family: game-over;
+  src: url(../fonts/PressStart2P-Regular.ttf);
+}
+
+/* Let's use the keyframes to create an animated color transition */
+
+@keyframes slow-flash {
+  from {background-color: #f19b0a;}
+  to {background-color: #red;}
+}
+
+/* Now we'll apply the keyframe to the element h1 and have the animation transition and then reverse */
+
+h1 {
+  background-color: #990bb4;
+  animation-name: slow-flash;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Let's use that custom font to make the header look like a game. */
+h1{
+  padding: 15px 15px;
+  font-size: 30px;
+  font-family: game-over;
+  text-align: center;
+}
+
+/* Adds padding beneath the Mangoes Collected */
+
+.mangojuice-count{
+  margin-bottom: 10px;
+}
+
+.make-btn {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  background-color: #ebc021;
+}
+
+/* The cursor will change when it hovers over the Make button */
+.make-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #142cec;
+}
+
+/* This is where we style our upgrades */
+
+.upgrades-title {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-decoration: underline;
+}
+
+/* Upgrade 1: Juice Press */
+
+.juice-press {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ebc021
+}
+
+.juice-press:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #142cec;
+}
+
+/* Upgrade 2: Juice machine */
+
+.juice-machine {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ebc021
+}
+
+.juice-machine:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #142cec;
+}
