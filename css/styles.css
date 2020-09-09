@@ -11,19 +11,19 @@ body{
   src: url(../fonts/PressStart2P-Regular.ttf);
 }
 
-/* Let's use the keyframes to create an animated color transition */
+/* Let's use the keyframes to create an animation for  color transition */
 
 @keyframes slow-flash {
-  from {background-color: #f19b0a;}
-  to {background-color: #red;}
+  from {color: #f19b0a;}
+  to {color: #red;}
 }
 
 /* Now we'll apply the keyframe to the element h1 and have the animation transition and then reverse */
 
 h1 {
-  background-color: #990bb4;
+  background-color: #f19b0a;
   animation-name: slow-flash;
-  animation-duration: 10s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
