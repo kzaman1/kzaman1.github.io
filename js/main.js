@@ -22,7 +22,7 @@ var upJuiceDroneRate = 1000;
 
 //Juice Factory Upgrade Variables
 var upJuiceFactoryCount = 0;
-var upJuiceFactoryCost = 1000;
+var upJuiceFactoryCost = 10000;
 var upJuiceFactoryRate = 1000;
 
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
