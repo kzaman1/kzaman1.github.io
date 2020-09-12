@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css\styles.css">
   </head>
   <body>
+
+    <embed src="audio\8_Bit_Menu_-_David_Renda.mp3" loop="true" autostart="true" width="2"
+             height="0">
+
     <h1>Mango Juice Maker!</h1>
     <div id="mangojuiceCount" class="mangojuice-count">
       Mango Juices Made: 0
@@ -30,6 +34,18 @@
 
       <div>
         <button type="button" class="juice-machine" onclick="buyJuiceMachine()"> Juice Machine ($20)</button> x <span id="JuiceMachineCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-bot" onclick="buyJuiceBot()"> Juice Bot ($100)</button> x <span id="JuiceBotCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-drone" onclick="buyJuiceDrone()"> Juice Drone ($1,000)</button> x <span id="JuiceDroneCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-factory" onclick="buyJuiceFactory()"> Juice Factory ($10,000)</button> x <span id="JuiceFactory">0</span>
       </div>
 
 

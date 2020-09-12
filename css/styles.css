@@ -64,7 +64,28 @@ h1{
   text-decoration: underline;
 }
 
-/* Upgrade 1: Juice Press */
+/* I used to style each button, but it got repetitive so instead, I just styled the button itself */
+button {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ebc021
+}
+
+button:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #142cec;
+}
+
+
+/* Archive of old stuff I used to use
+
+Here are my older buttons
+
+Upgrade 1: Juice Press
 
 .juice-press {
   font-size: 18px;
@@ -81,7 +102,7 @@ h1{
   background-color: #142cec;
 }
 
-/* Upgrade 2: Juice machine */
+/* Upgrade 2: Juice machine
 
 .juice-machine {
   font-size: 18px;
@@ -97,3 +118,39 @@ h1{
   color: #000000;
   background-color: #142cec;
 }
+
+/* Upgrade 3: Juice Bot
+
+.juice-bot {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ebc021
+}
+
+.juice-bot:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #142cec;
+}
+
+/* Upgrade 3: Juice Bot
+
+.juice-drone {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ebc021
+}
+
+.juice-drone:hover{
+  cursor: pointer;
+  color: #000000;
+  background-color: #142cec;
+}
+
+*/
