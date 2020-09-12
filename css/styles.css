@@ -68,10 +68,12 @@ h1{
 button {
   font-size: 18px;
   border-radius: 5px;
-  padding: 15px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: #ebc021
+  background-color: #ebc021;
+  width: 300px;
 }
 
 button:hover{
@@ -80,6 +82,11 @@ button:hover{
   background-color: #142cec;
 }
 
+img {
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
 
 /* Archive of old stuff I used to use
 
