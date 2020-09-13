@@ -56,13 +56,9 @@ h1{
 
 .mangojuice-count {
   margin-bottom: 10px;
-}
-
-.mangouice-count.sticky {
   position: sticky;
   top: 0;
 }
-
 
 /* This is where we style our shop */
 
