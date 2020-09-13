@@ -42,25 +42,12 @@ h1{
   margin-bottom: 10px;
 }
 
-.make-btn {
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 15px 15px;
-  background-color: #ebc021;
-}
-
-/* The cursor will change when it hovers over the Make button */
-.make-btn:hover {
-  cursor: pointer;
-  color: white;
-  background-color: #142cec;
-}
-
 /* This is where we style our upgrades */
 
 .upgrades-title {
   padding-top: 20px;
   padding-bottom: 5px;
+  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -71,18 +58,20 @@ button {
   text-align: left;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 30px;
+  padding-left: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #ebc021;
-  width: 300px;
+  width: 350px;
 }
 
 button:hover{
   cursor: pointer;
-  color: #000000;
-  background-color: #142cec;
+  color: white;
+  background-color: #eca714;
 }
+
+/* This will make all of the images and icons the same format */
 
 img {
   width: 25px;

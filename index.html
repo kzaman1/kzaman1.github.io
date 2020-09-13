@@ -10,15 +10,12 @@
 
 
     <!--This is the audio file that will play throughout the game -->
-    <embed src="audio\8_Bit_Menu_-_David_Renda.mp3" loop="true" autostart="true" width="2"
-             height="0">
-    <audio autoplay loop></audio>
-
+    <embed src="audio\8_Bit_Menu_-_David_Renda.mp3" loop="true" autostart="true" width="2" height="0">
 
     <!--The main game title and mango juice count and button -->
     <h1>Mango Juice Maker!</h1>
     <div id="mangojuiceCount" class="mangojuice-count">
-      Mango Juices Made: 0
+    Mango Juices Made: 0
     </div>
 
 
@@ -51,6 +48,14 @@
 
       <div>
         <button type="button" class="juice-factory" onclick="buyJuiceFactory()"><img src="images\factory.svg"> Juice Factory ($10,000)</button> x <span id="JuiceFactoryCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-sea-station" onclick="buyJuiceSeaStation()"><img src="images\sea-station.svg"> Juice Sea Station ($100,000)</button> x <span id="JuiceSeaStationCount">0</span>
+      </div>
+
+      <div>
+        <button type="button" class="juice-space-station" onclick="buyJuiceSpaceStation()"><img src="images\space-station.svg"> Juice Space Station ($1,000,000)</button> x <span id="JuiceSpaceStationCount">0</span>
       </div>
 
     </div>

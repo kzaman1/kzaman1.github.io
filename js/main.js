@@ -23,7 +23,18 @@ var upJuiceDroneRate = 1000;
 //Juice Factory Upgrade Variables
 var upJuiceFactoryCount = 0;
 var upJuiceFactoryCost = 10000;
-var upJuiceFactoryRate = 1000;
+var upJuiceFactoryRate = 10000;
+
+//Juice Sea Station Upgrade Variables
+var upJuiceSeaStationCount = 0;
+var upJuiceSeaStationCost = 100000;
+var upJuiceSeaStationRate = 100000;
+
+//Juice Space Station Upgrade Variables
+var upJuiceSpaceStationCount = 0;
+var upJuiceSpaceStationCost = 1000000;
+var upJuiceSpaceStationRate = 1000000;
+
 
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
 function updateMangoJuiceDisplay(){
@@ -88,11 +99,31 @@ function buyJuiceFactory() {
   }
 }
 
+function buyJuiceSeaStation() {
+  if(mangojuices >= upJuiceSeaStationCost) {
+    upJuiceSeaStationCount++;
+    mangojuices = mangojuices - upJuiceSeaStationCost;
+
+    document.getElementById('JuiceSeaStationCount').innerHTML = upJuiceSeaStationCount;
+    updateMangoJuiceDisplay()
+  }
+}
+
+function buyJuiceSpaceStation() {
+  if(mangojuices >= upJuiceSpaceStationCost) {
+    upJuiceSpaceStationCount++;
+    mangojuices = mangojuices - upJuiceSpaceStationCost;
+
+    document.getElementById('JuiceSpaceStationCount').innerHTML = upJuiceSpaceStationCount;
+    updateMangoJuiceDisplay()
+  }
+}
+
 
 // This is the main loop. This is where a lot of the action happens //
 window.setInterval(mainLoop, 1000);
 
 function mainLoop(){
-  mangojuices = mangojuices + (upJuicePressCount * upJuicePressRate) + (upJuiceMachineCount * upJuiceMachineRate) + (upJuiceBotCount * upJuiceBotRate) + (upJuiceDroneCount * upJuiceDroneRate) + (upJuiceFactoryCount * upJuiceFactoryCount);
+  mangojuices = mangojuices + (upJuicePressCount * upJuicePressRate) + (upJuiceMachineCount * upJuiceMachineRate) + (upJuiceBotCount * upJuiceBotRate) + (upJuiceDroneCount * upJuiceDroneRate) + (upJuiceFactoryCount * upJuiceFactoryRate) + (upJuiceSeaStationCount * upJuiceSeaStationRate) + (upJuiceSpaceStationCount * upJuiceSpaceStationRate);
   updateMangoJuiceDisplay()
 }
