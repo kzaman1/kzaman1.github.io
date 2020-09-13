@@ -5,6 +5,13 @@ body{
   background-color: #f19b0a;
 }
 
+/* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+}
+
 /* Since we're making a game, let's add a custom font that gives the feel of a game */
 @font-face {
   font-family: game-over;
@@ -77,6 +84,11 @@ img {
   width: 25px;
   height: 25px;
   padding-right: 10px;
+}
+
+footer {
+  border: 1px solid #000000;
+  padding: 5px;
 }
 
 /* Archive of old stuff I used to use
