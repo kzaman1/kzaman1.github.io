@@ -81,8 +81,9 @@ button {
   margin-bottom: 5px;
   margin-right: 5px;
   background-color: #ebc021;
-  width: 400px;
 }
+
+  /*width: 400px; */
 
 button:hover{
   cursor: pointer;
