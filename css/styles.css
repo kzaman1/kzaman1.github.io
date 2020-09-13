@@ -42,9 +42,9 @@ h1{
   margin-bottom: 10px;
 }
 
-/* This is where we style our upgrades */
+/* This is where we style our shop */
 
-.upgrades-title {
+.marketplace-title {
   padding-top: 20px;
   padding-bottom: 5px;
   font-weight: bold;
@@ -58,11 +58,11 @@ button {
   text-align: left;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 20px;
+  padding-left: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #ebc021;
-  width: 350px;
+  width: 400px;
 }
 
 button:hover{

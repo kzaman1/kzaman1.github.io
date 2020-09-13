@@ -35,6 +35,11 @@ var upJuiceSpaceStationCount = 0;
 var upJuiceSpaceStationCost = 1000000;
 var upJuiceSpaceStationRate = 1000000;
 
+//Juice Particle Accelerator Upgrade Variables
+var upJuiceParticleAcceleratorCount = 0;
+var upJuiceParticleAcceleratorCost = 1000000;
+var upJuiceParticleAcceleratorRate = 1000000;
+
 
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
 function updateMangoJuiceDisplay(){
@@ -119,11 +124,21 @@ function buyJuiceSpaceStation() {
   }
 }
 
+function buyJuiceParticleAccelerator() {
+  if(mangojuices >= upJuiceParticleAcceleratorCost) {
+    upJuiceParticleAcceleratorCount++;
+    mangojuices = mangojuices - upJuiceParticleAcceleratorCost;
+
+    document.getElementById('JuiceParticleAcceleratorCount').innerHTML = upJuiceParticleAcceleratorCount;
+    updateMangoJuiceDisplay()
+  }
+}
+
 
 // This is the main loop. This is where a lot of the action happens //
 window.setInterval(mainLoop, 1000);
 
 function mainLoop(){
-  mangojuices = mangojuices + (upJuicePressCount * upJuicePressRate) + (upJuiceMachineCount * upJuiceMachineRate) + (upJuiceBotCount * upJuiceBotRate) + (upJuiceDroneCount * upJuiceDroneRate) + (upJuiceFactoryCount * upJuiceFactoryRate) + (upJuiceSeaStationCount * upJuiceSeaStationRate) + (upJuiceSpaceStationCount * upJuiceSpaceStationRate);
+  mangojuices = mangojuices + (upJuicePressCount * upJuicePressRate) + (upJuiceMachineCount * upJuiceMachineRate) + (upJuiceBotCount * upJuiceBotRate) + (upJuiceDroneCount * upJuiceDroneRate) + (upJuiceFactoryCount * upJuiceFactoryRate) + (upJuiceSeaStationCount * upJuiceSeaStationRate) + (upJuiceSpaceStationCount * upJuiceSpaceStationRate) + (upJuiceParticleAcceleratorCount * upJuiceParticleAcceleratorRate);
   updateMangoJuiceDisplay()
 }
