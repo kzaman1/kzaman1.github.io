@@ -11,11 +11,11 @@ body{
 }
 
 /* samsung s7 portrait */
-@media {
-    (-webkit-min-device-pixel-ratio: 3)
-    and (min-resolution: 192dpi)and max-width:640px)
+@media only screen and (max-width: 600px) {
+  button {
+    width: 90%;
+  }
 }
-
 
 /* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
 .container{
