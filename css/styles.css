@@ -10,7 +10,11 @@ body{
   width: extend-to-zoom;
 }
 
-@media (max-width: 500px){
+/* samsung s7 portrait */
+@media
+    (-webkit-min-device-pixel-ratio: 3)
+    and (min-resolution: 192dpi)and max-width:640px){
+
 }
 
 
