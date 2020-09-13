@@ -60,6 +60,10 @@ h1{
   top: 0;
   background-color: #f19b0a;
   text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* This is where we style our shop */
