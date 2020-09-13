@@ -46,7 +46,7 @@ h1 {
   animation-direction: alternate;
 }
 
-/* Let's use that custom font to make the header look like a game. */
+/* Let's use a custom font to make the header look like a game. */
 h1{
   padding: 15px 15px;
   font-size: 30px;
@@ -54,10 +54,9 @@ h1{
   text-align: center;
 }
 
-/* Adds padding beneath the Mangoes Collected */
-
 .mangojuice-count{
   margin-bottom: 10px;
+  position: sticky;
 }
 
 /* This is where we style our shop */
