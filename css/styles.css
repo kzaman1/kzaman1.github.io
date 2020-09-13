@@ -10,6 +10,9 @@ body{
   width: extend-to-zoom;
 }
 
+@media (max-width: 500px){
+}
+
 
 /* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
 .container{
