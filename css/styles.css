@@ -68,8 +68,10 @@ h1{
 button {
   font-size: 18px;
   border-radius: 5px;
+  text-align: left;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 30px;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #ebc021;
