@@ -11,10 +11,9 @@ body{
 }
 
 /* samsung s7 portrait */
-@media
+@media {
     (-webkit-min-device-pixel-ratio: 3)
-    and (min-resolution: 192dpi)and max-width:640px){
-
+    and (min-resolution: 192dpi)and max-width:640px)
 }
 
 
