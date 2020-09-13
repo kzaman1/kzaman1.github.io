@@ -5,8 +5,13 @@ body{
   background-color: #f19b0a;
 }
 
-/* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
 
+
+/* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
 .container{
   display: flex;
   flex-flow: row wrap;
