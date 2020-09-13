@@ -54,10 +54,14 @@ h1{
   text-align: center;
 }
 
-.mangojuice-count{
+.mangojuice-count {
   margin-bottom: 10px;
+}
+
+.mangouice-count.sticky {
   position: sticky;
 }
+
 
 /* This is where we style our shop */
 
