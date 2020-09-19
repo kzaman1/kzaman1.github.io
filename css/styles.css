@@ -12,14 +12,14 @@ body{
 }
 
 
-samsung s7 portrait
+/*samsung s7 portrait*/
 @media only screen and (max-width: 400px) {
   button {
     width: 90%;
   }
 }
 
-Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen
+/*Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen*/
 .container{
   display: flex;
   flex-flow: row wrap;
