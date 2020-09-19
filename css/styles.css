@@ -5,12 +5,12 @@ body{
   background-color: #f19b0a;
 }
 
-/*
+
 @viewport {
   zoom: 1.0;
   width: extend-to-zoom;
 }
-*/
+
 
 /* samsung s7 portrait
 @media only screen and (max-width: 400px) {
