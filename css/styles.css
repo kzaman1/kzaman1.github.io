@@ -10,13 +10,12 @@ body{
   width: extend-to-zoom;
 }
 
-/* samsung s7 portrait
+/* samsung s7 portrait */
 @media only screen and (max-width: 400px) {
   button {
     width: 90%;
   }
 }
-*/
 
 /* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
 .container{
@@ -88,10 +87,9 @@ button {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
-  background-color: #ebc021;
+  background-color: ##0c5047;
 }
-
-
+/* ebc021 */
 
 button:hover{
   cursor: pointer;
