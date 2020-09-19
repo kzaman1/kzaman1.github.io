@@ -20,11 +20,12 @@ body{
 }
 */
 
-/* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen */
+/* Flexbox is needed for mobile responsiveness. It helps you change sizes and alignments based on the width of the screen 
 .container{
   display: flex;
   flex-flow: row wrap;
 }
+*/
 
 /* Since we're making a game, let's add a custom font that gives the feel of a game */
 @font-face {
