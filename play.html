@@ -13,7 +13,10 @@
 
 
   </head>
-  <body>
+
+  <!--Countdown function is initiated when the page is loaded -->
+  <body onload ="countdown();">
+
 
 
     <!--This is the audio file that will play throughout the game -->
@@ -22,10 +25,20 @@
     <!--The main game title and mango juice count and button -->
     <h1>Mango Juice Mania!</h1>
     <div id="mangojuiceCount" class="mangojuice-count">
-    Mango Juice Money: $0
+      Mango Juice Money: $0
+    </div>
+
+    <!--Timer-->
+    <div class = "countdown-timer">
+      <img src="images\stop-watch.svg">
+      Time Left:
+      <input id="minutes" type = "text">
+      <input id="seconds" type = "text">
     </div>
 
 
+
+    <!-- Clicking the button will increase the amount of Mango juice money-->
     <div>
       <button type="button" class="sell-juice" title="That Mango Juice won't sell itself!" onclick="make()"><img src="images\mango-juice.svg">Sell Mango Juice!<img src="images\mango-juice.svg"></button>
       <p>

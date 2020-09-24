@@ -63,6 +63,53 @@ function make(){
   updateDisplay();
 }
 
+// If I could turn back time. This is where we set up the counter.
+
+var mins = 0.5; // Set the number of minutes
+
+var secs = mins * 60; // Calculates the number of seconds
+
+function countdown(){ // Countdown function is initiated when the page is laoded
+  setTimeout('Decrement()', 60);
+}
+
+function Decrement(){ // The Decrement Function will decrement the time by seconds and minutes
+  if (document.getElementById){
+    minutes = document.getElementById("minutes");
+    seconds = document.getElementById("seconds");
+
+      if (seconds <59) { //If there's less than a minute, the function will only return the seconds
+        seconds.value = secs;
+      }
+
+      else { //Otherwise the function will return both minutes and seconds if there is more than a minute
+        minutes.value = getminutes();
+        seconds.value = getseconds();
+      }
+
+      if (mins < 0){
+        alert("Time's Up!");
+        minutes.value = 0;
+        seconds.value = 0;
+      }
+
+      else{
+        secs--;
+        setTimeout('Decrement()', 1000);
+      }
+  }
+}
+
+
+function getminutes(){
+  mins = Math.floor(secs / 60);
+  return mins;
+}
+
+function getseconds(){
+  return secs - Math.round(mins*60);
+}
+
 // Upgrade Functions
 
 function buyJuicePress() {

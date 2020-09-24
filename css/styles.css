@@ -83,8 +83,9 @@ h1{
 .mangojuice-count {
   margin-bottom: 10px;
   position: sticky;
-  top: 0;
+  top: 5px;
   background-color: #b3f285;
+  font-weight: bold;
   text-align: center;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
@@ -99,6 +100,19 @@ h1{
   font-weight: bold;
 }
 
+/*Here's where we style the countdown timer */
+
+.countdown-timer{
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #bdaacc;
+  font-weight: bold;
+  text-align: center;
+  position: sticky;
+  top: 63px;
+}
+
 /* This is where we style our shop */
 
 .marketplace-title {
@@ -107,6 +121,7 @@ h1{
   font-weight: bold;
   text-decoration: underline;
 }
+
 
 /* I used to style each button, but it got repetitive so instead, I just styled the button itself */
 button {
