@@ -13,7 +13,7 @@ body{
 
 
 /*media query to set the parameters below a screen size */
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   button {
     width: 90%;
   }
