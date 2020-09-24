@@ -73,6 +73,7 @@ h1{
 .play-game {
   margin: auto;
   display: block;
+  text-align: center;
 }
 
 /* PLAY PAGE */
