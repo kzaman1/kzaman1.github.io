@@ -12,7 +12,7 @@ body{
 }
 
 
-/*samsung s7 portrait*/
+/*media query to set the parameters below a screen size */
 @media only screen and (max-width: 400px) {
   button {
     width: 90%;
