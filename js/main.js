@@ -54,7 +54,7 @@ var upJuiceParticleAcceleratorBaseCost = 1000000;
 
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
 function updateMangoJuiceDisplay(){
-  document.getElementById('mangojuiceCount').innerHTML = "Mango Juices Made: " + mangojuices.toLocaleString(); //.toLocaleString will add commas to large numbers
+  document.getElementById('mangojuiceCount').innerHTML = "Mango Juice Money: $" + mangojuices.toLocaleString(); //.toLocaleString will add commas to large numbers
 }
 
 // This function will manually add mango juices.

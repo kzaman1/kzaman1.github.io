@@ -23,6 +23,8 @@ body{
 .container{
   display: flex;
   flex-flow: row wrap;
+  border-style: solid;
+  padding-left: 15px;
 }
 
 
@@ -57,16 +59,40 @@ h1{
   text-align: center;
 }
 
+/* HOME PAGE */
+
+/*Let's add a cute little border around the tutorial section on the homepage. */
+.tutorial {
+  border-style: solid;
+  padding-left: 15px;
+  padding-right:15px;
+}
+
+/*Homepage: Let's center the play game button */
+
+.play-game {
+  margin: auto;
+  display: block;
+}
+
+/* PLAY PAGE */
+
+/* This adds a bar at the top that will stay sticky whether the player scrolls up or down */
 .mangojuice-count {
   margin-bottom: 10px;
   position: sticky;
   top: 0;
-  background-color: #f19b0a;
+  background-color: #b3f285;
   text-align: center;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.sell-juice{
+  margin: auto;
+  display: block;
 }
 
 /* This is where we style our shop */
