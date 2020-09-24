@@ -65,7 +65,7 @@ function make(){
 
 // If I could turn back time. This is where we set up the counter.
 
-var mins = 0.5; // Set the number of minutes
+var mins = 2; // Set the number of minutes
 
 var secs = mins * 60; // Calculates the number of seconds
 
