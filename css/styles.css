@@ -95,6 +95,8 @@ h1{
 .sell-juice{
   margin: auto;
   display: block;
+  text-align:center;
+  font-weight: bold;
 }
 
 /* This is where we style our shop */
