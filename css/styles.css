@@ -124,7 +124,7 @@ button {
   background-color: #ebc021;
 }
 
-button:hover{
+button:not(.disabled):hover {
   cursor: pointer;
   color: white;
   background-color: #eca714;

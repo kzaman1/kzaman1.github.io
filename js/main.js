@@ -47,10 +47,9 @@ var upJuiceSpaceStationBaseCost = 1000000;
 
 //Juice Particle Accelerator Upgrade Variables
 var upJuiceParticleAcceleratorCount = 0;
-var upJuiceParticleAcceleratorCost = 1000000;
-var upJuiceParticleAcceleratorRate = 1000000;
-var upJuiceParticleAcceleratorBaseCost = 1000000;
-
+var upJuiceParticleAcceleratorCost = 10000000;
+var upJuiceParticleAcceleratorRate = 10000000;
+var upJuiceParticleAcceleratorBaseCost = 10000000;
 
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
 function updateMangoJuiceDisplay(){
@@ -60,7 +59,8 @@ function updateMangoJuiceDisplay(){
 // This function will manually add mango juices.
 function make(){
   mangojuices++; // Same as 'mangojuices = mangojuices + 1' or 'mangojuices +=1'
-  updateMangoJuiceDisplay();
+  //Replaced updateMangoJuiceDisplay(); with updateDisplay();
+  updateDisplay();
 }
 
 // Upgrade Functions
@@ -177,10 +177,129 @@ function updateItemCost (baseCost, numberOwned){
   return Math.round(baseCost * Math.pow(costMultiplier, numberOwned))
 }
 
+// Function to disable buttons until the resource amount has been reached
+
+function displayItemAvailability1 (itemCost, buyJPress){
+  var button = document.getElementById("buyJPress");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability2 (itemCost, buyJMachine){
+  var button = document.getElementById("buyJMachine");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability3 (itemCost, buyJBot){
+  var button = document.getElementById("buyJBot");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability4 (itemCost, buyJDrone){
+  var button = document.getElementById("buyJDrone");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+function displayItemAvailability5 (itemCost, buyJFactory){
+  var button = document.getElementById("buyJFactory");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability6 (itemCost, buyJSeastation){
+  var button = document.getElementById("buyJSeastation");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability7 (itemCost, buyJSpacestation){
+  var button = document.getElementById("buyJSpacestation");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+function displayItemAvailability8 (itemCost, buyJParticleaccelerator){
+  var button = document.getElementById("buyJParticleaccelerator");
+
+  if(itemCost > mangojuices) {
+    button.disabled = true;
+    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+  } else {
+    button.disabled = false;
+    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
+  }
+}
+
+// Function to display item availability with the item information
+
+function updateStoreAvailability() {
+  //Check Juice Press
+  displayItemAvailability1(upJuicePressCost, "buyJuicePress");
+  displayItemAvailability2(upJuiceMachineCost, "buyJuiceMachine");
+  displayItemAvailability3(upJuiceBotCost, "buyJuiceBot");
+  displayItemAvailability4(upJuiceDroneCost, "buyJuiceDrone");
+  displayItemAvailability5(upJuiceFactoryCost, "buyJuiceFactory");
+  displayItemAvailability6(upJuiceSeaStationCost, "buyJuiceSeaStation");
+  displayItemAvailability7(upJuiceSpaceStationCost, "buyJuiceSpaceStation");
+  displayItemAvailability8(upJuiceParticleAcceleratorCost, "buyJuiceParticleAccelerator");
+
+}
+
+// Function to update the display
+
+function updateDisplay() {
+  updateMangoJuiceDisplay();
+  updateStoreAvailability();
+}
+
 // This is the main loop. This is where a lot of the action happens //
 window.setInterval(mainLoop, 1000);
 
 function mainLoop(){
   mangojuices = mangojuices + (upJuicePressCount * upJuicePressRate) + (upJuiceMachineCount * upJuiceMachineRate) + (upJuiceBotCount * upJuiceBotRate) + (upJuiceDroneCount * upJuiceDroneRate) + (upJuiceFactoryCount * upJuiceFactoryRate) + (upJuiceSeaStationCount * upJuiceSeaStationRate) + (upJuiceSpaceStationCount * upJuiceSpaceStationRate) + (upJuiceParticleAcceleratorCount * upJuiceParticleAcceleratorRate);
-  updateMangoJuiceDisplay()
+  updateDisplay();
 }
