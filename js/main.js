@@ -65,7 +65,7 @@ function make(){
 
 // If I could turn back time. This is where we set up the counter.
 
-var mins = .10; // Set the number of minutes
+var mins = 2; // Set the number of minutes
 var total_seconds = mins * 60; // Calculates the number of total seconds
 
 function countdown(){ // Countdown function is initiated when the page is laoded
@@ -113,7 +113,7 @@ function Decrement(){ // The Decrement Function will decrement the time by secon
         disableDisplayItem(buyJFactory);
         disableDisplayItem(buyJSeastation);
         disableDisplayItem(buyJSpacestation);
-        disableDisplayItem(buyJParticleaccelerator);
+        disableDisplayItem(buyJParticleaccelerator);s
       }
       else{
         total_seconds--;
