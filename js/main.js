@@ -65,36 +65,58 @@ function make(){
 
 // If I could turn back time. This is where we set up the counter.
 
-var mins = 2; // Set the number of minutes
-
-var secs = mins * 60; // Calculates the number of seconds
+var mins = .10; // Set the number of minutes
+var total_seconds = mins * 60; // Calculates the number of total seconds
 
 function countdown(){ // Countdown function is initiated when the page is laoded
   setTimeout('Decrement()', 60);
 }
 
+// Function to specifically disable a button so I can call it whenever I want regardless of the condition
+
+function disableDisplayItem(buttonId){
+  var button = document.getElementById(buttonId);
+  button.disabled = true;
+  button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
+}
+
 function Decrement(){ // The Decrement Function will decrement the time by seconds and minutes
+  var display_seconds = total_seconds % 60;
+  var prepend_zero = "";
+
   if (document.getElementById){
     minutes = document.getElementById("minutes");
     seconds = document.getElementById("seconds");
+    console.log(display_seconds);
 
-      if (seconds <59) { //If there's less than a minute, the function will only return the seconds
-        seconds.value = secs;
+      if (display_seconds <59) { //If there's less than a minute, the function will only return the seconds
+
+        if (display_seconds <10) {
+          prepend_zero = "0";
+        }
+        seconds.innerHTML = prepend_zero + display_seconds;
       }
-
       else { //Otherwise the function will return both minutes and seconds if there is more than a minute
-        minutes.value = getminutes();
-        seconds.value = getseconds();
+        minutes.innerHTML = getminutes();
+        seconds.innerHTML = display_seconds;
       }
 
-      if (mins < 0){
+      if (total_seconds < 0){
         alert("Time's Up!");
-        minutes.value = 0;
-        seconds.value = 0;
+        minutes.innerHTML = 0;
+        seconds.innerHTML = 0;
+        disableDisplayItem(sellJuice);
+        disableDisplayItem(buyJPress);
+        disableDisplayItem(buyJMachine);
+        disableDisplayItem(buyJBot);
+        disableDisplayItem(buyJDrone);
+        disableDisplayItem(buyJFactory);
+        disableDisplayItem(buyJSeastation);
+        disableDisplayItem(buyJSpacestation);
+        disableDisplayItem(buyJParticleaccelerator);
       }
-
       else{
-        secs--;
+        total_seconds--;
         setTimeout('Decrement()', 1000);
       }
   }
@@ -102,12 +124,12 @@ function Decrement(){ // The Decrement Function will decrement the time by secon
 
 
 function getminutes(){
-  mins = Math.floor(secs / 60);
+  mins = Math.floor(total_seconds / 60);
   return mins;
 }
 
 function getseconds(){
-  return secs - Math.round(mins*60);
+  return total_seconds - Math.round(mins*60);
 }
 
 // Upgrade Functions
@@ -226,91 +248,8 @@ function updateItemCost (baseCost, numberOwned){
 
 // Function to disable buttons until the resource amount has been reached
 
-function displayItemAvailability1 (itemCost, buyJPress){
-  var button = document.getElementById("buyJPress");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability2 (itemCost, buyJMachine){
-  var button = document.getElementById("buyJMachine");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability3 (itemCost, buyJBot){
-  var button = document.getElementById("buyJBot");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability4 (itemCost, buyJDrone){
-  var button = document.getElementById("buyJDrone");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-function displayItemAvailability5 (itemCost, buyJFactory){
-  var button = document.getElementById("buyJFactory");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability6 (itemCost, buyJSeastation){
-  var button = document.getElementById("buyJSeastation");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability7 (itemCost, buyJSpacestation){
-  var button = document.getElementById("buyJSpacestation");
-
-  if(itemCost > mangojuices) {
-    button.disabled = true;
-    button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-  } else {
-    button.disabled = false;
-    button.classList.remove("disabled"); //Removes 'disabled' CSS class to the element.
-  }
-}
-
-function displayItemAvailability8 (itemCost, buyJParticleaccelerator){
-  var button = document.getElementById("buyJParticleaccelerator");
+function displayItemAvailability (itemCost, buttonId){
+  var button = document.getElementById(buttonId);
 
   if(itemCost > mangojuices) {
     button.disabled = true;
@@ -325,14 +264,14 @@ function displayItemAvailability8 (itemCost, buyJParticleaccelerator){
 
 function updateStoreAvailability() {
   //Check Juice Press
-  displayItemAvailability1(upJuicePressCost, "buyJuicePress");
-  displayItemAvailability2(upJuiceMachineCost, "buyJuiceMachine");
-  displayItemAvailability3(upJuiceBotCost, "buyJuiceBot");
-  displayItemAvailability4(upJuiceDroneCost, "buyJuiceDrone");
-  displayItemAvailability5(upJuiceFactoryCost, "buyJuiceFactory");
-  displayItemAvailability6(upJuiceSeaStationCost, "buyJuiceSeaStation");
-  displayItemAvailability7(upJuiceSpaceStationCost, "buyJuiceSpaceStation");
-  displayItemAvailability8(upJuiceParticleAcceleratorCost, "buyJuiceParticleAccelerator");
+  displayItemAvailability(upJuicePressCost, "buyJPress");
+  displayItemAvailability(upJuiceMachineCost, "buyJMachine");
+  displayItemAvailability(upJuiceBotCost, "buyJBot");
+  displayItemAvailability(upJuiceDroneCost, "buyJDrone");
+  displayItemAvailability(upJuiceFactoryCost, "buyJFactory");
+  displayItemAvailability(upJuiceSeaStationCost, "buyJSeastation");
+  displayItemAvailability(upJuiceSpaceStationCost, "buyJSpacestation");
+  displayItemAvailability(upJuiceParticleAcceleratorCost, "buyJParticleaccelerator");
 
 }
 
