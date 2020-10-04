@@ -51,6 +51,33 @@ var upJuiceParticleAcceleratorCost = 10000000;
 var upJuiceParticleAcceleratorRate = 10000000;
 var upJuiceParticleAcceleratorBaseCost = 10000000;
 
+//Array to store variables to make it easier to clear outer
+
+var item_count = [
+  mangojuices,
+  upJuicePressCount,
+  upJuiceMachineCount,
+  upJuiceBotCount,
+  upJuiceDroneCount,
+  upJuiceFactoryCount,
+  upJuiceSeaStationCount,
+  upJuiceSpaceStationCount,
+  upJuiceParticleAcceleratorCount
+];
+
+// Function which sets each variable's value to 0 //
+function clearValues(){
+  mangojuices = 0;
+  upJuicePressCount = 0;
+  upJuiceMachineCount = 0;
+  upJuiceBotCount = 0;
+  upJuiceDroneCount = 0;
+  upJuiceFactoryCount = 0;
+  upJuiceSeaStationCount = 0;
+  upJuiceSpaceStationCount = 0;
+  upJuiceParticleAcceleratorCount  = 0;
+}
+
 // This function updates the mango juices made so you don't have to copy / paste the same code over and over again //
 function updateMangoJuiceDisplay(){
   document.getElementById('mangojuiceCount').innerHTML = "Mango Juice Money: $" + mangojuices.toLocaleString(); //.toLocaleString will add commas to large numbers
@@ -73,12 +100,6 @@ function countdown(){ // Countdown function is initiated when the page is laoded
 }
 
 // Function to specifically disable a button so I can call it whenever I want regardless of the condition
-
-function disableDisplayItem(buttonId){
-  var button = document.getElementById(buttonId);
-  button.disabled = true;
-  button.classList.add("disabled"); //Adds 'disabled' CSS class to the element.
-}
 
 function Decrement(){ // The Decrement Function will decrement the time by seconds and minutes
   var display_seconds = total_seconds % 60;
@@ -104,8 +125,24 @@ function Decrement(){ // The Decrement Function will decrement the time by secon
       if (total_seconds < 0){
         alert("Time's Up!");
         minutes.innerHTML = 0;
-        seconds.innerHTML = 0;
-        disableDisplayItem(sellJuice);
+        seconds.innerHTML = "00";
+        sellJuice.setAttribute('disabled','disabled');
+        sellJuice.classList.add("disabled"); //Removes 'disabled' CSS class to the element which will also disable the hover effect
+        item_count.forEach(clearValues);
+        /*Sets mango juices to 0 so if a person hasn't purchased anything,so they can't purchase an item
+        upJuicePressCount=0;
+        upJuiceMachineCount=0;
+        upJuiceBotCount=0;
+        upJuiceDroneCount=0;
+        upJuiceFactoryCount=0;
+        upJuiceSeaStationCount=0;
+        upJuiceSpaceStationCount=0;
+        upJuiceParticleAcceleratorCount=0;
+        sellJuice.setAttribute('disabled', 'disabled'); // The 'Sell Mango Juice' button is disabled
+        sellJuice.classList.add("disabled"); //Adds 'disabled' CSS class to the element so the hover is disabled. */
+
+    // Disable button functions with Asif; this didn't work because the disableDisplayItem function didn't work.//
+        /*disableDisplayItem(sellJuice);
         disableDisplayItem(buyJPress);
         disableDisplayItem(buyJMachine);
         disableDisplayItem(buyJBot);
@@ -113,7 +150,7 @@ function Decrement(){ // The Decrement Function will decrement the time by secon
         disableDisplayItem(buyJFactory);
         disableDisplayItem(buyJSeastation);
         disableDisplayItem(buyJSpacestation);
-        disableDisplayItem(buyJParticleaccelerator);s
+        disableDisplayItem(buyJParticleaccelerator);*/
       }
       else{
         total_seconds--;
@@ -121,7 +158,6 @@ function Decrement(){ // The Decrement Function will decrement the time by secon
       }
   }
 }
-
 
 function getminutes(){
   mins = Math.floor(total_seconds / 60);

@@ -39,7 +39,7 @@
 
     <!-- Clicking the button will increase the amount of Mango juice money-->
     <div>
-      <button type="button" id="sellJuice" class="sell-juice" title="That Mango Juice won't sell itself!" onclick="make()"><img src="images\mango-juice.svg">Sell Mango Juice!<img src="images\mango-juice.svg"></button>
+      <button type="button" id="sellJuice" class="sell-juice" title="That Mango Juice won't sell itself!" onclick="make()" enabled><img src="images\mango-juice.svg">Sell Mango Juice!<img src="images\mango-juice.svg"></button>
       <p>
     </div>
 
@@ -55,7 +55,7 @@
             <p>
 
           <div>
-            <button type="button" class="juice-press" id="buyJPress" title="Your hipster baristas will work faster with juice presses!" onclick="buyJuicePress()" disabled><img src="images\juice-press.svg">Juice Press ($<span id="upJuicePressCost">10</span>) x <span id="JuicePressCount">0</span></button>
+            <button type="button" class="juice-press" id="buyJPress" title="Your hipster baristas will work faster with juice presses!" onclick="buyJuicePress()" disabled="disabled"><img src="images\juice-press.svg">Juice Press ($<span id="upJuicePressCost">10</span>) x <span id="JuicePressCount">0</span></button>
           </div>
 
           <div>
@@ -98,8 +98,9 @@
   <a href="index.html">Go Back Home</a>
   <br>
   <br>
-  </body>
   <script src="js/main.js"></script>
+  </body>
+
 
 <footer> &#169 2020 Game By <a href="http://www.fifthtribe.com">Fifth Tribe</a>. Music by <a href="https://www.fesliyanstudios.com/royalty-free-music/download/8-bit-menu/287">Feliyan Studios.</a></footer>
 </html>
